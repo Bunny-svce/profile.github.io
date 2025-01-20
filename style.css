@@ -232,7 +232,7 @@ form .btn2{
 /*--------------------------------------------------css for small screen-----------------------------------------------------*/
 @media only screen and (max-width: 667px){
     #header{
-        background-image: url(/home/venkatakrishna/Downloads/mobile.png);
+        background-image: url(images/mobile.png);
     }
     .header-text{
         margin-top: 50%;
