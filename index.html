@@ -11,9 +11,10 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav>
+            <nav class="navbar">
                 <img src="images/logo.png" class="logo">
-                <ul>
+                <div class="menu-icon" id="menu-icon">☰</div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -179,6 +180,20 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+        const menuIcon = document.getElementById("menu-icon");
+        const navLinks = document.getElementById("nav-links");
+
+        menuIcon.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+
+            // Change ☰ ↔ ✖
+            if (navLinks.classList.contains("active")) {
+                menuIcon.textContent = "✖";
+            } else {
+                menuIcon.textContent = "☰";
+            }
+        });
 
     </script>
 
